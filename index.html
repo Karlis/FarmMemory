@@ -1,0 +1,108 @@
+<html>
+	<head>
+	<meta name="viewport" id="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="game_field">
+			<div id="game_screen">
+				<div id="game_dots">
+				</div>
+				<div class="span6">
+					<div class="h50">
+						<div id="game_0" class="touch_tile"></div>
+					</div>
+					<div class="h50">
+						<div id="game_1" class="touch_tile"></div>
+					</div>
+				</div>
+				<div class="span6">
+					<div class="h50">
+						<div id="game_2" class="touch_tile"></div>
+					</div>
+					<div class="h50">
+						<div id="game_3" class="touch_tile"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="comp_screen" style="width: 1282px;">
+				<div class="span3h">
+					<div id="comp_0" class="comp_tile">
+						<div class="animal_circle" id="animalcircle_0"></div>
+					</div>
+					<div id="comp_1" class="comp_tile">
+						<div class="animal_circle" id="animalcircle_1"></div>
+					</div>
+					<div id="comp_2" class="comp_tile">
+						<div class="animal_circle" id="animalcircle_2"></div>
+					</div>
+				</div>
+				<div class="span3h">
+					<div id="comp_3" class="comp_tile">
+						<div class="animal_circle" id="animalcircle_3"></div>
+					</div>
+					<div id="comp_4" class="comp_tile">
+						<div class="animal_circle" id="animalcircle_4"></div>
+					</div>
+					<div id="comp_5" class="comp_tile">
+						<div class="animal_circle" id="animalcircle_5"></div>
+					</div>
+				</div>
+				<div class="span3h">
+					<div id="comp_6" class="comp_tile">
+						<div class="animal_circle" id="animalcircle_6"></div>
+					</div>
+					<div id="comp_7" class="comp_tile">
+						<div class="animal_circle" id="animalcircle_7"></div>
+					</div>
+					<div id="comp_8" class="comp_tile">
+						<div class="animal_circle" id="animalcircle_8"></div>
+					</div>
+				</div>
+			</div>
+			<div id="end_screen" class="text_screen">
+				<span id="game_over_text">GAME OVER</span>
+				<br/>
+				<span id="game_over_score_text">Your score is:</span><span id="steps"></span>
+				<br/>
+				<img id="play_again_button" src="assets/menu/play_again.png" />
+			</div>
+			<div id="about_screen" class="text_screen">
+				<span id="about_about">Farm Memory</span><br/><br/>
+
+				Press <img style="height:2em; vertical-align: middle;" src="assets/menu/compose_b.png"/> To learn animal names <br/>
+				Press <img style="height:2em;  vertical-align: middle;" src="assets/menu/playbutton_blured.png"/> To play the memory game.<br/><br/>
+
+				<b>In The Memory Game</b><br/>
+				* Listen to the sequence played by animals<br/>
+				* Repeat the sequence to gain points<br/><br/>
+
+				<span >Compete with friends to achieve the most points. And enjoy your new animal friends.</span>
+<hr style="clear:both; border:0;" />
+				<p style="font-size:0.8em; float:right;">
+					<i>Developer:</i> Karlis Lukstins<br/>
+					<i>Artist:</i> Adele Grunte
+				</p>
+			</div>
+		</div>
+		<div id="menu">
+			<ul>
+					<li id="menu_new"><img src="assets/menu/playbutton_blured.png"/></li>
+					<li id="menu_comp"><img src="assets/menu/compose_b.png"/></li>
+					<li id="menu_about"><img src="assets/menu/info_b.png"/></li>
+			</ul>
+		</div>
+		<div id="dialog"><div id="dialog_text"></div></div>
+		<div id="dialog_dis"></div>
+	</body>
+	<script type="text/javascript" src="sound.js"></script>
+	<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			fm = new FarmMemory();
+			fm.init();
+		})
+	</script>
+</html>

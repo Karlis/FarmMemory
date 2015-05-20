@@ -1,0 +1,264 @@
+body{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	background: #222;
+	font-family: "Myriad Bold", Helvetica, Verdana;
+	min-height: 445px;
+	min-width: 675px;
+
+	-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
+}
+
+#menu{
+	height:100%;
+	width:100px;
+	position: fixed;
+	top:0px;
+	left:0px;
+	background-color: rgba(0,0,0,0.3);
+	border-right:1px solid black;
+}
+
+#menu ul{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+
+#menu ul li{
+	border-radius:10px;
+	list-style: none;
+	height:80px;
+	width:80px;
+	margin-left:10px;
+	margin-top:10px;
+}
+
+#game_field{
+	position: fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	color:#EEE;
+
+}
+
+/* SCREEN SECTION */
+#game_screen{
+	margin:auto auto;
+	height: 100%;
+	display: none;
+	position: absolute;
+	left: 100px;
+}
+
+#game_screen.playing{
+	background-color: #e4e4e4;
+}
+
+#game_screen.playing .touch_tile{
+	opacity: 0.5;
+}
+
+#comp_screen{
+	margin:auto auto;
+	height: 100%;
+	display: block;
+	position: absolute;
+	left: 100px;
+	width: 100%;
+}
+
+#end_screen{
+	display: none;
+	text-align: center;
+}
+
+#game_over_score_text{
+	font-size:35px;
+	text-shadow:1px 1px 2px #000;
+	text-align:center;
+	vertical-align: middle;
+	margin-right: 30px;
+
+
+}
+#game_over_text{
+	font-size:100px;
+	font-weight:bold;
+	text-shadow: 3px 3px 8px black;
+	text-align: center;
+}
+
+#steps{
+	font-size: 150px;
+	font-weight: bold;
+	text-shadow: 3px 3px 5px black;
+	text-align: center;
+	vertical-align: middle;
+
+}
+
+#about_about{
+	font-size:40px;
+	font-weight: bold;
+}
+.text_screen{
+	display:none;
+	margin: auto auto;
+	margin-left:130px;
+
+	margin-top:30px;
+	padding:30px;
+	padding-bottom:5px;
+	padding-top:30px;
+	font-size:25px;
+	text-shadow:1px 1px 2px #000;
+
+	border-radius:15px;
+	background-color: rgba(0,0,0,0.3);
+	border:2px solid black;
+	margin-right: 30px;
+
+}
+
+
+/* TILE DESIGN */
+
+.touch_tile{
+	width:250px;
+	height:200px;
+	margin-left: -125px;
+	margin-top:-100px;
+	display: inline-block;
+	border-radius:5px;
+	position: relative;
+	top:50%;
+	left: 50%;
+	background-image: url(assets/animals/sheep.png);
+}
+
+.animal_circle{
+	width:150px;
+	height:150px;
+	border-radius:75px;
+	top:50%;
+	left: 50%;
+	margin-top: -75px;
+	margin-left: -75px;
+	position: relative;
+	background-image: url(assets/animals/small/sheep.png);
+	background-repeat: no-repeat no-repeat;
+}
+
+
+
+#audio_div{
+	display: none;
+}
+
+
+
+#dialog{
+position:absolute;
+top:0px;
+left:0px;
+height:100%;
+width:100%;
+display:none;
+}
+
+#dialog_text{
+bottom: 20px;
+left:50%;
+margin-left: -80px;
+position: absolute;
+color: #2AF;
+font-weight:bold;
+font-size:50px;
+text-shadow:3px 3px 13px #FFF;
+}
+
+#dialog_dis{
+position:absolute;
+top:0px;
+left:0px;
+height:100%;
+width:100%;
+background: rgba(10, 10, 70, 0.4);
+display:none;
+}
+
+
+/* LAYOUT */
+
+.span6 {
+ width: 50%;
+ float: left;
+}
+
+.span3h{
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+.comp_tile{
+	height: 33%;
+	display: inline-block;
+	width: 100%;
+}
+
+.h50 {
+	height: 50%;
+	width: 100%;
+}
+
+
+.red_glow{
+	box-shadow: 0 0 20px 15px #FA6666;
+}
+.blue_glow{
+	box-shadow: 0 0 20px 15px #1010AB;
+	opacity: 1 !important;
+}
+.green_glow{
+	box-shadow: 0 0 20px 15px #74AA66;
+}
+
+#game_dots {
+height: 20px;
+display: inline-block;
+position: absolute;
+left: 50%;
+}
+
+.dot {
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background-color: #e4e4e4;
+margin: 5px;
+float: left;
+display: inline;
+margin-top: 15px;
+}
+
+.dot_green{
+	background-color: #77CC55;
+}
+
+.playing .dot{
+	background-color: #333;
+}
